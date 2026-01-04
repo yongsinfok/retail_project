@@ -1,0 +1,22 @@
+Code,Type,Name,QualifiedName,Description,Inputs,Outputs
+D1,DataSet,[D1] - retail_data.csv,retail_data.csv@retail,original CSV from Kaggle with retail data (primary source),,
+D10,DataSet,[D10] - API Flask remote (ngrok),api_flask_remote@retail,"Remote Flask API exposed via ngrok tunnel, providing aggregated product data to Azure Data Factory",,
+D11,DataSet,[D11] - retail_project_db_AzureSQL,retail_project_db_AzureSQL@azure,Final consolidated database in Azure SQL containing all retail data,,
+D2,DataSet,[D2] - customers_local,customers_local@retail,Customers table imported into SSMS (from retail_data.csv -> JSON -> import),,
+D3,DataSet,[D3] - products_local,products_local@retail,Products table imported into SSMS (via API Flask -> import),,
+D4,DataSet,[D4] - sales_local,sales_local@retail,Facts table 'sales' imported at SSMS from retail_data.csv,,
+D5,DataSet,[D5] - retail_summary_local,retail_summary_local@retail,Final consolidated retail summary table (sales + customers + products) in SSMS,,
+D6,DataSet,[D6] - agg_sales.csv,agg_sales.csv@blobstorage,CSV with sales aggregated data exported from SSMS (to Azure Blob Storage container),,
+D7,DataSet,[D7] - agg_customers.csv,agg_customers.csv@blobstorage,CSV with aggregated customers data exported from SSMS to Azure Blob Storage container,,
+D8,DataSet,[D8] - API Flask local,api_flask_local@retail,API Flask local exposes aggregated products data from SSMS,,
+D9,DataSet,[D9] - almac101_container,almac101_container@blobstorage,Azure Blob Storage container that stores the aggregated CSV files (agg_sales.csv and agg_customers.csv),,
+P1a,Process,[P1a]_import_sales_to_SSMS,P1a_import_sales_to_SSMS@retail,Import 'sales' part/data from retail_data.csv to the table sales_local at SSMS,[D1] - retail_data.csv,[D4] - sales_local
+P1b,Process,[P1b] - export_customers_json,P1b_export_customers_json@retail,Extract customers from retail_data.csv to JSON and load into customers_local (SSMS),[D1] - retail_data.csv,[D2] - customers_local
+P1c,Process,[P1c] - load_products_via_API,P1c_load_products_via_API@retail,"Expose products via API Flask, consume and insert into products_local (SSMS)",[D1] - retail_data.csv,[D3] - products_local
+P1d,Process,[P1d] - consolidate_sales_customers_products,P1d_consolidate_sales_customers_products@retail,"Join sales_local, customers_local, and products_local into retail_summary_local (SSMS consolidation step)","[D2] - customers_local, [D3] - products_local, [D4] - sales_local",[D5] - retail_summary_local
+P2,Process,[P2] - export_sales_agg_to_csv,P2_export_sales_agg_to_csv@retail,Export process over sales aggregation from SSMS DB (D5) to csv file at Blob Storage (D6),[D5] - retail_summary_local,[D6] - agg_sales.csv
+P3,Process,[P3] - export_customers_agg_to_csv,P3_export_customers_agg_to_csv@retail,Export Process over customers aggregation from SSMS DB (D5) (to CSV file at Blob Storage (D7)),[D5] - retail_summary_local,[D7] - agg_customers.csv
+P4,Process,[P4] - export_products_agg_to_api,P4_export_products_agg_to_api@retail,Process to publish products aggregated data from SSMS DB (D5) (to API Flask local (D8)),[D5] - retail_summary_local,[D8] - API Flask local
+P5,Process,[P5] - publish_through_ngrok,P5_publish_through_ngrok@retail,"Process that exposes the local Flask API (D8) through an ngrok tunnel, creating the remote endpoint (D10)",[D8] - API Flask local,[D10] - API Flask remote (ngrok)
+P6,Process,[P6] - ADF_pipeline_csv_to_SQL,P6_ADF_pipeline_csv_to_SQL@retail,ADF pipeline to load aggregated CSV files into Azure SQL,"[D7] - agg_customers.csv, [D6] - agg_sales.csv",[D11] - retail_project_db_AzureSQL
+P7,Process,[P7] - ADF_pipeline_API_to_SQL,P7_ADF_pipeline_API_to_SQL@retail,ADF pipeline to load aggregated data from remote Flask API into Azure SQL,[D10] - API Flask remote (ngrok),[D11] - retail_project_db_AzureSQL
