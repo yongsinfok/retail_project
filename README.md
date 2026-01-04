@@ -85,6 +85,8 @@ The Power BI report is structured into the following sections:
 
 8️⃣ Technologies Used
 - SQL Server
+- Python / Jupyter Notebooks
+- API Flask
 - Azure SQL Database
 - Azure Blob Storage
 - Apache Atlas
