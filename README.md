@@ -85,11 +85,16 @@ The Power BI report is structured into the following sections:
 
 8️⃣ Technologies Used
 - SQL Server
-- Python / Jupyter Notebooks
+- Python / Jupyter Notebooks (ETL & integration)
 - API Flask
 - Azure SQL Database
-- Azure Blob Storage
-- Apache Atlas
-- Power BI
+- Azure Blob Storage / Azure Data Factory
+- Apache Atlas (Data Governance & Lineage)
+- Power BI (Desktop & Service)
 - Git & GitHub
 - draw.io (architecture diagrams)
+
+
+## Final Notes
+This project was designed as a hands-on exercise to cover the full lifecycle of
+a modern data platform, from ingestion to governance and visualization.
